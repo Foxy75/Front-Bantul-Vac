@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariwisata di bantul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Pariwisata Bantul</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#places">Tempat</a></li>
+                <li><a href="#galleri">Galeri</a></li>
+                <li><a href="#buku-tamu">Buku Tamu</a></li>
+            </ul>
+        </div>
+    </nav>
+<section class="article-section" id="home">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang Di Bantul</h1>
+            <p>Mengeksplorasi Keindahan Di Bantul, Yogyakarta</p>
+        </div>
+    </div>
+
+    <!-- Main Knten -->
+    <div class="container">
+        <!-- Artikel -->
+        
+            <h2 class="section-title">Tentang Bantul</h2>
+            <div class="article-grid">
+                <article class="article-card">
+                    <h3>Ringkasan Tentang Bantul</h3>
+                    <p>Bantul adalah kabupaten di DIY yang terkenal tentang kultur yang melimpah dan keindahan alamnya.</p>
+                </article>
+                <article class="article-card">
+                    <h3>Warisan Budaya</h3>
+                    <p>Bantul merupakan rumah bagi banyak situs bersejarah dan desa-desa tradisional yang mencerminkan identitas budaya Yogyakarta yang kuat.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tempat -->
+        <section class="places-section" id="places">
+            <h2 class="section-title">Tempat Wisata Yang Wajib Di Kunjungi</h2>
+            <div class="places-grid">
+                <div class="place-card">
+                    <h3>Pantai Parangtritis </h3>
+                    <div class="place-image">
+                        <img src="parangtritis.jpg" alt="Parangtritis">
+                    </div>
+                </div>
+                <div class="place-card">
+                    <h3>Goa Cemara</h3>
+                    <div class="place-image">
+                        <img src="goa-cemara.jpg" alt="Goa Cemara">
+                    </div>
+                </div>
+                <div class="place-card">
+                    <h3>Goa Pindul </h3>
+                    <div class="place-image">
+                        <img src="pindul-cave.jpg" alt="Goa Pindul">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galleri -->
+        <section class="gallery-section" id="gallery">
+            <h2 class="section-title">Galeri</h2>
+            <div class="gallery-grid">
+                <img src="gallery1.jpg" alt="Galleri1" class="gallery-item">
+                <img src="gallery2.jpg" alt="Galleri2" class="gallery-item">
+                <img src="gallery3.jpg" alt="Galleri3" class="gallery-item">
+                <img src="gallery4.jpg" alt="Galleri4" class="gallery-item">
+                <img src="gallery5.jpg" alt="Galleri5" class="gallery-item">
+                <img src="gallery6.jpg" alt="Galleri6" class="gallery-item">
+            </div>
+        </section>
+
+        <!-- Maps -->
+        <section class="maps-section">
+            <h2 class="section-title">Lokasi</h2>
+            <div class="maps-container">
+            <div class="map-card">
+                <h3>Pantai Parangtritis</h3>
+                <iframe src="https://www.google.com/maps?q=-8.0267,110.3288&z=15&output=embed" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="map-card">
+                <h3>Goa Cemara</h3>
+                <iframe src="https://www.google.com/maps?q=-8.0891,110.2417&z=15&output=embed" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="map-card">
+                <h3>Goa Pindul</h3>
+                <iframe src="https://www.google.com/maps?q=-7.9296,110.6347&z=15&output=embed" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            </div>
+        </section>
+
+
+        <!-- Guestbook -->
+        <section class="Bukutamu" id="buku-tamu">
+            <h2 class="section-title">Buku Tamu</h2>
+            <form id="guestbook-form">
+                <input type="text" id="name" placeholder="Nama" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Pesan" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <div id="guestbook-messages"></div>
+        </section>
+        <script src="main.js"></script>
+    </html>
+
+                    
