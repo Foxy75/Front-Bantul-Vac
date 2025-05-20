@@ -146,31 +146,81 @@ body {
 }
 
 /* Gallery Section */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+.slider {
+    position: relative;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden;
+    height: 400px; /* Set a fixed height for the slider */
 }
 
-.gallery-item {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 3px;
-    transition: transform 0.3s ease;
+.slider img {
+    transform: scale(0.8);
+    display: none;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
+
+
+img.displaySlide{
+    display: block;
+}
+
+.slide {
+    width: auto;
+     /* Adjusted to be responsive */
+}
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%; /* Center the buttons vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    background-color: #333; /* Dark background to match the footer */
+    color: #fff; /* White text for contrast */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the image */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Slightly larger font for better visibility */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+button.prev {
+    left: 10px; /* Position the "prev" button on the left */
+}
+
+button.next {
+    right: 10px; /* Position the "next" button on the right */
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: #666; /* Lighter background on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+button.prev:active,
+button.next:active {
+    background-color: #444; /* Darker background when clicked */
+    transform: translateY(-50%) scale(0.95); /* Slightly shrink the button when clicked */
 }
 
 /* Maps Section */
 .maps-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 2px;
+    margin-bottom: 100px;
+    margin-left: 125px;
+}
+
+.maps-section {
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 38px;
 }
 
 .map-card {
@@ -259,55 +309,145 @@ a:hover {
     color: #666;
 }
 
-/* Button Styles */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-}
+/* Minimalist Old Book Themed Guest Book CSS - White & Black dominant */
 
-.btn:hover {
-    background-color: #444;
-}
-
-.slider {
-    position: relative;
-    overflow: hidden;
+.Bukutamu {
+    background: #ffffff; /* pure white background */
+    padding: 40px 30px;
     border-radius: 10px;
-}
-
-.slider img {
-    width: 100%;
-    display: none;
-    border-radius: 10px;
-}
-
-.slider img.active {
-    display: block;
-}
-
-.slider-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
+    max-width: 520px;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #111111; /* almost black text for readability */
+    border: 1px solid #e0e0e0;
+  }
+  
+  .Bukutamu .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 28px;
+    color: #111111;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+  }
+  
+  #guestbook-form {
     display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.control-button {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  #guestbook-form input[type="text"],
+  #guestbook-form input[type="email"],
+  #guestbook-form textarea {
+    padding: 12px 14px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: #111111;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+    min-height: 40px;
+  }
+  
+  #guestbook-form input[type="text"]:focus,
+  #guestbook-form input[type="email"]:focus,
+  #guestbook-form textarea:focus {
+    outline: none;
+    border-color: #444444;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15);
+    background: #fafafa;
+  }
+  
+  #guestbook-form textarea {
+    min-height: 80px;
+  }
+  
+  #guestbook-form button {
+    background: transparent;
+    color: #111111;
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 12px 0;
+    border: 2px solid #111111;
+    border-radius: 8px;
     cursor: pointer;
-    padding: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    letter-spacing: 0.06em;
+  }
+  
+  #guestbook-form button:hover {
+    background-color: #111111;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #guestbook-messages {
+    margin-top: 30px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px 22px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: 'Georgia', serif;
+    color: #111111;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+  }
+  
+  #guestbook-messages p {
+    background-color: #ffffff;
+    border-left: 4px solid #111111;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+    font-style: italic;
+    color: #222222;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+.place-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
-.control-button:hover {
-    background-color: rgba(255, 255, 255, 1);
+.place-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
 }
+
+.place-card p {
+    flex: 1;
+    text-align: left;
+    font-family: 'Courier New', monospace;
+
+}
+
+.place-image img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* make the p in the left side and the image on the right side but keeping the h3 in the top center of all of that  */

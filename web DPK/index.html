@@ -14,6 +14,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#places">Tempat</a></li>
+                <li><a href="#maps">lokasi</a></li>
                 <li><a href="#galleri">Galeri</a></li>
                 <li><a href="#buku-tamu">Buku Tamu</a></li>
             </ul>
@@ -48,43 +49,38 @@
         <section class="places-section" id="places">
             <h2 class="section-title">Tempat Wisata Yang Wajib Di Kunjungi</h2>
             <div class="places-grid">
-                <div class="place-card">
-                    <h3>Pantai Parangtritis </h3>
-                    <div class="place-image">
-                        <img src="parangtritis.jpg" alt="Parangtritis">
-                    </div>
-                </div>
-                <div class="place-card">
-                    <h3>Goa Cemara</h3>
-                    <div class="place-image">
-                        <img src="goa-cemara.jpg" alt="Goa Cemara">
-                    </div>
-                </div>
-                <div class="place-card">
-                    <h3>Goa Pindul </h3>
-                    <div class="place-image">
-                        <img src="pindul-cave.jpg" alt="Goa Pindul">
-                    </div>
+            <div class="place-card">
+                <h3 class="place-title">Pantai Parangtritis</h3>
+                <div class="place-content">
+                <p>Pantai yang terletak di sisi timur Pantai Parangkusumo ini memiliki legenda yang melekat dengan Ratu Kidul sebagai penguasa laut selatan dan keindahannya. Pantai ini merupakan pantai yang cukup luas di Yogyakarta, berbeda dengan pantai-pantai di kawasan Yogyakarta lainya seperti Pantai di Gunungkidul yang ukurannya relatif kecil.</p></div>
+                <div class="place-image">
+                    <img src="image/parangtritis.jpg" alt="Parangtritis">
                 </div>
             </div>
-        </section>
-
-        <!-- Galleri -->
-        <section class="gallery-section" id="gallery">
-            <h2 class="section-title">Galeri</h2>
-            <div class="gallery-grid">
-                <img src="gallery1.jpg" alt="Galleri1" class="gallery-item">
-                <img src="gallery2.jpg" alt="Galleri2" class="gallery-item">
-                <img src="gallery3.jpg" alt="Galleri3" class="gallery-item">
-                <img src="gallery4.jpg" alt="Galleri4" class="gallery-item">
-                <img src="gallery5.jpg" alt="Galleri5" class="gallery-item">
-                <img src="gallery6.jpg" alt="Galleri6" class="gallery-item">
+            <div class="place-card">
+                <h3 class="place-title">Goa Cemara</h3>
+                <div class="place-content">
+                <p>Goa Cemara mempunyai ciri khas yang unik pada pantainya yang memiliki pasir berwarna hitam tapi lembut dengan ombak yang cukup besar kerakteristik pantai selatan. Pantai ini merupakan pantai pengembangan baru dimana terdapat banyak pohon Cemara udang rindang membentuk seperti goa, hal ini yang membuat pantai ini dinamai Goa Cemara. Pohon Cemara ini bertujuan untuk melindungi abrasi air laut dan menahan gumuk pasir supaya tidak mengalami perpindahan akibat tiupan angin.</p></div>
+                <div class="place-image">
+                    <img src="image/Pantai-Goa-Cemara.jpg" alt="Goa Cemara">
+                
+                </div>
+            </div>
+            <div class="place-card">
+                <h3 class="place-title">Goa Pindul</h3>
+                <div class="place-content">
+                <p>Gua Pindul dikenal karena cara menyusuri gua yang dilakukan dengan menaiki ban pelampung di atas aliran sungai bawah tanah di dalam gua, kegiatan ini dikenal dengan istilah cave tubing.[2] Aliran sungai bawah tanah dimulai dari mulut gua sampai bagian akhir gua, di dalam gua terdapat bagian sempit yang hanya bisa dilewati satu ban pelampung, sehingga biasanya wisatawan akan bergantian satu per satu untuk melewati bagian ini.</p></div>
+                <div class="place-image">
+                    <img src="image/goapindul.jpg" alt="Goa Pindul">
+                </div>
+                
+            </div>
             </div>
         </section>
 
         <!-- Maps -->
-        <section class="maps-section">
-            <h2 class="section-title">Lokasi</h2>
+        <section class="maps-section" id="maps">
+            <h2 class="section-title">Lokasi Tempat</h2>
             <div class="maps-container">
             <div class="map-card">
                 <h3>Pantai Parangtritis</h3>
@@ -101,6 +97,28 @@
             </div>
         </section>
 
+        <!-- Galleri -->
+        <section class="gallery-section" id="gallery">
+            <h2 class="section-title">Galeri</h2>
+            <div class="slider">
+            <div class="slides">
+                <img src="image/pindul.jpg" alt="pindul" class="slide">
+                <img src="image/pindul1.jpg" alt="pindul1" class="slide">
+                <img src="image/pindul2.jpg" alt="pindul2" class="slide">
+                <img src="image/parangtritis1.jpg" alt="parangtritis1" class="slide">
+                <img src="image/parangtritis2.jpg" alt="parangtritis2" class="slide">
+                <img src="image/parangtritis3.jpg" alt="parangtritis3" class="slide">
+                <img src="image/goacemara.jpg" alt="goacemara" class="slide">
+                <img src="image/goacemara1.jpg" alt="goacemara1" class="slide">
+                <img src="image/goacemara2.jpg" alt="goacemara2" class="slide">
+            </div>
+            <button type="button" class="prev" onclick="prevPic()">&#10894</button>
+            <button type="button" class="next" onclick="nextPic()">&#10893</button>
+            </div>
+        </section>
+
+        
+
 
         <!-- Guestbook -->
         <section class="Bukutamu" id="buku-tamu">
@@ -113,7 +131,10 @@
             </form>
             <div id="guestbook-messages"></div>
         </section>
-        <script src="main.js"></script>
-    </html>
+</body>
+<footer>@Hanif S nya Sigma</footer>
+            <script src="main.js"></script>
+            <script src="slide.js"></script>
+</html>
 
                     
