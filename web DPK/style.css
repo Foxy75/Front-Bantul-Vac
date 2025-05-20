@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset dan Gaya Dasar */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Navigation */
+/* Navigasi */
 .navbar {
     position: fixed;
     top: 0;
@@ -53,7 +53,7 @@ body {
     color: #666;
 }
 
-/* Hero Section */
+/* Bagian Hero */
 .hero {
     height: 80vh;
     display: flex;
@@ -83,14 +83,14 @@ body {
     color: #666;
 }
 
-/* Main Content Container */
+/* Kontainer Konten Utama */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
 
-/* Section Titles */
+/* Judul Bagian */
 .section-title {
     font-size: 2.5rem;
     color: #333;
@@ -100,7 +100,7 @@ body {
     border-bottom: 2px solid #ddd;
 }
 
-/* Article Cards */
+/* Kartu Artikel */
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -124,7 +124,7 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Places Cards */
+/* Kartu Tempat */
 .places-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -144,82 +144,97 @@ body {
     object-fit: cover;
     border-radius: 3px;
 }
+.place-image img {
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar kontainer */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+    object-fit: cover; /* Memastikan gambar pas di dalam kontainer */
+}
 
-/* Gallery Section */
+/* Bagian Galeri */
 .slider {
     position: relative;
-    display: flex; /* Use Flexbox */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    height: 400px; /* Set a fixed height for the slider */
+    height: 600px;
+    background: #eee;
+    padding: 20px;
 }
 
 .slider img {
-    transform: scale(0.8);
     display: none;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: scale-down;
+    width: auto;
+    height: auto;
+    object-position: center;
+    background: #eee;
 }
-
-
 
 img.displaySlide{
     display: block;
+    margin: auto;
 }
 
 .slide {
     width: auto;
-     /* Adjusted to be responsive */
+    height: 100%;
+    /* Disesuaikan agar responsif */
 }
 button.prev,
 button.next {
     position: absolute;
-    top: 50%; /* Center the buttons vertically */
-    transform: translateY(-50%); /* Adjust for vertical centering */
-    background-color: #333; /* Dark background to match the footer */
-    color: #fff; /* White text for contrast */
+    top: 50%; /* Pusatkan tombol secara vertikal */
+    transform: translateY(-50%); /* Penyesuaian untuk pemusatan vertikal */
+    background-color: #333; /* Latar belakang gelap sesuai footer */
+    color: #fff; /* Teks putih untuk kontras */
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    z-index: 10; /* Ensure buttons are above the image */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1.2rem; /* Slightly larger font for better visibility */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    z-index: 10; /* Pastikan tombol di atas gambar */
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 1.2rem; /* Ukuran font sedikit lebih besar */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efek hover halus */
 }
 
 button.prev {
-    left: 10px; /* Position the "prev" button on the left */
+    left: 10px; /* Posisikan tombol "prev" di kiri */
 }
 
 button.next {
-    right: 10px; /* Position the "next" button on the right */
+    right: 10px; /* Posisikan tombol "next" di kanan */
 }
 
 button.prev:hover,
 button.next:hover {
-    background-color: #666; /* Lighter background on hover */
-    transform: translateY(-50%) scale(1.1); /* Slightly enlarge the button on hover */
+    background-color: #666; /* Latar belakang lebih terang saat hover */
+    transform: translateY(-50%) scale(1.1); /* Tombol sedikit membesar saat hover */
 }
 
 button.prev:active,
 button.next:active {
-    background-color: #444; /* Darker background when clicked */
-    transform: translateY(-50%) scale(0.95); /* Slightly shrink the button when clicked */
+    background-color: #444; /* Latar belakang lebih gelap saat diklik */
+    transform: translateY(-50%) scale(0.95); /* Tombol sedikit mengecil saat diklik */
 }
 
-/* Maps Section */
+/* Bagian Peta */
 .maps-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    display: flex;
+    justify-content: center; /* Pusatkan baris secara horizontal */
+    align-items: flex-start; /* Rata atas */
     gap: 2rem;
-    margin-top: 2px;
-    margin-bottom: 100px;
-    margin-left: 125px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap; /* Izinkan membungkus di layar kecil */
 }
 
 .maps-section {
     display: flex;
     flex-direction: column;
-    
+    align-items: center; /* Pusatkan konten di setiap bagian */
     margin-top: 38px;
 }
 
@@ -228,6 +243,9 @@ button.next:active {
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan konten peta */
 }
 
 /* Footer */
@@ -243,7 +261,7 @@ footer p {
     margin-bottom: 1rem;
 }
 
-/* Guest Book Section */
+/* Bagian Buku Tamu */
 .guestbook-section {
     background-color: #fff;
     padding: 2rem;
@@ -279,7 +297,7 @@ footer p {
     background-color: #444;
 }
 
-/* Responsive Design */
+/* Desain Responsif */
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
@@ -298,7 +316,7 @@ footer p {
     }
 }
 
-/* Link Styles */
+/* Gaya Link */
 a {
     color: #333;
     text-decoration: none;
@@ -309,17 +327,17 @@ a:hover {
     color: #666;
 }
 
-/* Minimalist Old Book Themed Guest Book CSS - White & Black dominant */
+/* CSS Buku Tamu Tema Buku Lama Minimalis - Dominan Putih & Hitam */
 
 .Bukutamu {
-    background: #ffffff; /* pure white background */
+    background: #ffffff; /* latar belakang putih polos */
     padding: 40px 30px;
     border-radius: 10px;
     max-width: 520px;
     margin: 40px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     font-family: 'Georgia', 'Times New Roman', serif;
-    color: #111111; /* almost black text for readability */
+    color: #111111; /* teks hampir hitam agar mudah dibaca */
     border: 1px solid #e0e0e0;
   }
   
@@ -450,4 +468,4 @@ a:hover {
     object-fit: cover;
     border-radius: 5px;
 }
-/* make the p in the left side and the image on the right side but keeping the h3 in the top center of all of that  */
+/* buat p di sisi kiri dan gambar di sisi kanan tapi h3 tetap di atas tengah semua itu */
