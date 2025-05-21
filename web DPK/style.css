@@ -55,13 +55,15 @@ body {
 
 /* Bagian Hero */
 .hero {
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(image/bg.jpg);
+    background-image: url(image/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 
 .hero-content {
@@ -140,8 +142,9 @@ body {
 
 .place-image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
+    overflow: hidden;
     border-radius: 3px;
 }
 .place-image img {
@@ -158,20 +161,24 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    width: 100%;
     height: 600px;
     background: #eee;
     padding: 20px;
+    min-width: 320px; /* optional: prevent too small */
 }
 
 .slider img {
     display: none;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: scale-down;
-    width: auto;
+    object-fit: contain;
+    width: 100%;
+    max-width: 650px;
     height: auto;
+    max-height: 400px;
     object-position: center;
     background: #eee;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
 img.displaySlide{
