@@ -227,6 +227,42 @@ button.next:active {
     transform: translateY(-50%) scale(0.95); /* Tombol sedikit mengecil saat diklik */
 }
 
+[class*="icono"] {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: aliceblue;
+  box-sizing: border-box;
+}
+
+[class*="icono-arrow1"] {
+  width: 20px;
+  height: 20px;
+  border-width: 4px 4px 0 0;
+  border-style: solid;
+  margin: 10px;
+}
+
+[class*="icono-arrow1"]:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -3px;
+  height: 4px;
+  width: 23px;
+  transform: rotate(-45deg);
+  transform-origin: right top;
+  box-shadow: inset 0 0 0 32px;
+}
+
+[class*="icono-arrow1-left"] {
+  transform: rotate(45deg);
+}
+
+[class*="icono-arrow1-right"] {
+  transform: rotate(-135deg);
+}
+
 /* Bagian Peta */
 .maps-container {
     display: flex;
@@ -255,18 +291,42 @@ button.next:active {
     align-items: center; /* Pusatkan konten peta */
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
+.place-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
-footer p {
-    margin-bottom: 1rem;
+.place-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
 }
+
+.place-card p {
+    flex: 1;
+    text-align: left;
+    font-family: 'Courier New', monospace;
+
+}
+
+.place-image img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* buat p di sisi kiri dan gambar di sisi kanan tapi h3 tetap di atas tengah semua itu */
+
 
 /* Bagian Buku Tamu */
 .guestbook-section {
@@ -441,38 +501,15 @@ a:hover {
     line-height: 1.4;
   }
   
-.place-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
-    flex-wrap: wrap;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-}
-
-.place-card h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    width: 100%;
+    padding: 2rem;
+    margin-top: 4rem;
 }
 
-.place-card p {
-    flex: 1;
-    text-align: left;
-    font-family: 'Courier New', monospace;
-
+footer p {
+    margin-bottom: 1rem;
 }
-
-.place-image img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-}
-/* buat p di sisi kiri dan gambar di sisi kanan tapi h3 tetap di atas tengah semua itu */
